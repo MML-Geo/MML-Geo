@@ -164,6 +164,7 @@
         document.getElementById('brand-home').addEventListener('click', e => {
             e.preventDefault();
             bootstrap.Tab.getOrCreateInstance(document.getElementById('home-tab')).show();
+            history.replaceState(null, null, '#home');
         });
     </script>
 </body>
