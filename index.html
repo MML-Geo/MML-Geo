@@ -149,7 +149,26 @@
   <main>
     <section id="about">
       <h2>About MML-GEO</h2>
-      <p>MML-GEO develops innovative approaches combining mechanics-based modelling and machine learning to bridge scales in geomechanics.</p>
+      <p>Geomaterials such as granular materials, rocks, and concrete derive their macroscopic response from
+evolving microstructures. This makes their behavior difficult to predict with classical continuum models,
+which are computationally efficient but often rely on phenomenological parameters only inspired by the
+microstructure. Multiscale modelling and computational homogenization provide a principled alternative by
+coupling macroscale simulations with representative elementary volumes, as in FE² or FEM×DEM
+approaches. Their broader use, however, remains limited by the repeated solution of computationnaly
+expensive auxiliary problems and by the limited interpretability of the macro–micro relationship, which is
+typically reconstructed numerically at each time step.
+MML-Geo addresses this bottleneck by combining constitutive laws formulation through stochastic
+homogenization with physics-informed machine learning. Its goal is to identify a compact and physically
+meaningful set of microstructural state variables governing the macroscopic behavior, and to build
+constitutive surrogates that are thermodynamically consistent, uncertainty-aware, and readily integrable
+into finite-element simulations for geotechnical analysis. The project aims to (1) identify compact internal
+variable representations of evolving geomaterial microstructures and determine when they are sufficient to
+predict constitutive behavior; (2) develop thermodynamically consistent, uncertainty aware, and
+computationally efficient data driven constitutive models; and (3) transfer these surrogate models to large
+scale structural simulations through stochastic homogenization and evaluate their performance on
+representative engineering demonstrators. By combining data science with multiscale modeling, MML Geo
+enables faster micro to macro simulations, robust uncertainty assessment, and practical validation on
+earthen dams and tunnels.</p>
     </section>
 
     <section id="team">
