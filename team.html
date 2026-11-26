@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team &amp; Institutions | MML-GEO</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team &amp; Institutions | MML-GEO</title>
+    <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 56px;
+        }
+        main { flex: 1; }
+        .window-section { padding: 60px 20px; }
+        .section-title { text-align: center; margin-bottom: 20px; color: #0A2540; font-weight: 600; }
+        .card-title { color: #0A2540; font-weight: 600; }
+        .nav-link.active { font-weight: 600; color: #0d6efd !important; }
+        footer { background: #0A2540; color: white; text-align: center; padding: 25px; margin-top: auto; }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>MML-GEO</h1>
-    <p class="subtitle">ANR PRC Project — Mechanics-based Machine Learning for Scale Bridging in Geomechanics</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work-packages.html">Work Packages</a></li>
-        <li><a href="team.html" class="active">Team</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html#home">MML-GEO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <h2>Team &amp; Institutions</h2>
-    <p>The MML-GEO consortium brings together researchers specializing in experimental geomechanics, constitutive modelling, and scientific machine learning.</p>
+    <main>
+        <section class="window-section">
+            <div class="container">
+                <h2 class="section-title">Team &amp; Institutions</h2>
+                <p class="lead text-center mx-auto mb-5" style="max-width: 800px;">
+                    The MML-GEO consortium brings together researchers specializing in experimental geomechanics, constitutive modelling, and scientific machine learning.
+                </p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Laboratoire Navier (Coordinator)</h3>
-        <p><strong>Institutions:</strong> École nationale des ponts et chaussées, Univ Gustave Eiffel, CNRS</p>
-        <p><strong>Location:</strong> Champs-sur-Marne, France</p>
-        <p><strong>Members:</strong> [Principal Investigator Name], [Co-PI / Researcher Names]</p>
-      </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 mb-3">Laboratoire Navier (Coordinator)</h3>
+                                <p class="mb-2"><strong>Institutions:</strong> École nationale des ponts et chaussées, Univ Gustave Eiffel, CNRS</p>
+                                <p class="mb-2"><strong>Location:</strong> Champs-sur-Marne, France</p>
+                                <p class="mb-0"><strong>Members:</strong> [Principal Investigator Name], [Co-PI / Researcher Names]</p>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="card">
-        <h3>[Partner Institution 2]</h3>
-        <p><strong>Laboratory:</strong> [Laboratory Name]</p>
-        <p><strong>Location:</strong> [City, France]</p>
-        <p><strong>Members:</strong> [Researcher Names]</p>
-      </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 mb-3">[Partner Institution 2]</h3>
+                                <p class="mb-2"><strong>Laboratory:</strong> [Laboratory Name]</p>
+                                <p class="mb-2"><strong>Location:</strong> [City, France]</p>
+                                <p class="mb-0"><strong>Members:</strong> [Researcher Names]</p>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="card">
-        <h3>PhD Students &amp; Postdocs</h3>
-        <p><strong>PhD Candidate (WP1/WP2):</strong> [Name or "Recruitment in progress"]</p>
-        <p><strong>Postdoctoral Researcher (WP3):</strong> [Name or "Recruitment in progress"]</p>
-      </div>
-    </div>
-  </main>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 bg-light">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 mb-3">PhD Students &amp; Postdocs</h3>
+                                <p class="mb-2"><strong>PhD Candidate (WP1/WP2):</strong> [Name or "Recruitment in progress"]</p>
+                                <p class="mb-0"><strong>Postdoctoral Researcher (WP3):</strong> [Name or "Recruitment in progress"]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    © MML-GEO | ANR PRC Project
-  </footer>
+    <footer>© MML-GEO | ANR PRC Project</footer>
 
+    <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
