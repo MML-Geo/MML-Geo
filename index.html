@@ -6,9 +6,40 @@
     <title>MML-GEO | Mechanics-based Machine Learning for Scale Bridging in Geomechanics</title>
     <link href="https://jsdelivr.net" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; display: flex; flex-direction: column; min-height: 100vh; padding-top: 56px; }
-        main, .tab-content, .tab-pane { flex: 1; display: flex; flex-direction: column; }
-        .hero { min-height: calc(100vh - 130px); background-color: #0A2540; background-image: linear-gradient(rgba(10, 37, 64, 0.72), rgba(10, 37, 64, 0.72)), url("ANR0.png"); background-size: contain; background-position: center; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center; text-align: center; color: white; padding: 40px 20px; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 56px;
+        }
+        main, .tab-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Ne s'applique qu'à l'onglet actif pour laisser Bootstrap masquer les autres */
+        .tab-content > .active {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .hero {
+            flex: 1;
+            min-height: calc(100vh - 130px);
+            background-color: #0A2540;
+            background-image: linear-gradient(rgba(10, 37, 64, 0.72), rgba(10, 37, 64, 0.72)), url("ANR0.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
         .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; margin-bottom: 20px; }
         .hero p { font-size: 1.35rem; }
         .window-section { padding: 60px 20px; }
@@ -19,27 +50,29 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home-pane" id="brand-home">MML-GEO</a>
+            <a class="navbar-brand fw-bold" href="#home" id="brand-home">MML-GEO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto" id="mainTabs" role="tablist">
-                    <li class="nav-item"><button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-pane" type="button">Home</button></li>
-                    <li class="nav-item"><button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-pane" type="button">About</button></li>
-                    <li class="nav-item"><button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-pane" type="button">Team</button></li>
-                    <li class="nav-item"><button class="nav-link" id="publications-tab" data-bs-toggle="tab" data-bs-target="#publications-pane" type="button">Publications</button></li>
-                    <li class="nav-item"><button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news-pane" type="button">News</button></li>
-                    <li class="nav-item"><button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-pane" type="button">Contact</button></li>
+                    <li class="nav-item"><button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Home</button></li>
+                    <li class="nav-item"><button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab">About</button></li>
+                    <li class="nav-item"><button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button" role="tab">Team</button></li>
+                    <li class="nav-item"><button class="nav-link" id="publications-tab" data-bs-toggle="tab" data-bs-target="#publications" type="button" role="tab">Publications</button></li>
+                    <li class="nav-item"><button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab">News</button></li>
+                    <li class="nav-item"><button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">Contact</button></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <main>
         <div class="tab-content" id="mainTabsContent">
-            <div class="tab-pane fade show active" id="home-pane" role="tabpanel">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
                 <section class="hero">
                     <div>
                         <h1>MML-GEO</h1>
@@ -48,19 +81,90 @@
                     </div>
                 </section>
             </div>
-            <!-- Sections About, Team, Publications, News, Contact incluses dans la structure des onglets Bootstrap -->
-            <div class="tab-pane fade" id="about-pane" role="tabpanel"><section class="window-section"><div class="container"><h2 class="section-title">About MML-GEO</h2><p class="lead text-center mx-auto" style="max-width: 800px;">MML-GEO develops innovative approaches combining mechanics-based modelling and machine learning to bridge scales in geomechanics.</p></div></section></div>
-            <div class="tab-pane fade" id="team-pane" role="tabpanel"><section class="window-section"><div class="container"><h2 class="section-title">Team &amp; Institutions</h2><p class="text-center">Project consortium and participating institutions.</p></div></section></div>
-            <div class="tab-pane fade" id="publications-pane" role="tabpanel"><section class="window-section"><div class="container"><h2 class="section-title">Publications</h2><p class="text-center">Publications and scientific outputs will be listed here.</p></div></section></div>
-            <div class="tab-pane fade" id="news-pane" role="tabpanel"><section class="window-section"><div class="container"><h2 class="section-title">News</h2><p class="text-center">Project news, events and recruitment opportunities.</p></div></section></div>
-            <div class="tab-pane fade" id="contact-pane" role="tabpanel"><section class="window-section"><div class="container text-center"><h2 class="section-title">Contact</h2><p><strong>Laboratoire Navier</strong><br>École nationale des ponts et chaussées<br>Champs-sur-Marne, France</p></div></section></div>
+
+            <div class="tab-pane fade" id="about" role="tabpanel">
+                <section class="window-section">
+                    <div class="container">
+                        <h2 class="section-title">About MML-GEO</h2>
+                        <p class="lead text-center mx-auto" style="max-width: 800px;">MML-GEO develops innovative approaches combining mechanics-based modelling and machine learning to bridge scales in geomechanics.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="team" role="tabpanel">
+                <section class="window-section">
+                    <div class="container">
+                        <h2 class="section-title">Team &amp; Institutions</h2>
+                        <p class="text-center">Project consortium and participating institutions.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="publications" role="tabpanel">
+                <section class="window-section">
+                    <div class="container">
+                        <h2 class="section-title">Publications</h2>
+                        <p class="text-center">Publications and scientific outputs will be listed here.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="news" role="tabpanel">
+                <section class="window-section">
+                    <div class="container">
+                        <h2 class="section-title">News</h2>
+                        <p class="text-center">Project news, events and recruitment opportunities.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="contact" role="tabpanel">
+                <section class="window-section">
+                    <div class="container text-center">
+                        <h2 class="section-title">Contact</h2>
+                        <p><strong>Laboratoire Navier</strong><br>École nationale des ponts et chaussées<br>Champs-sur-Marne, France</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
+
     <footer>© MML-GEO | ANR PRC Project</footer>
+
     <script src="https://jsdelivr.net"></script>
     <script>
-        document.getElementById('brand-home').addEventListener('click', e => { e.preventDefault(); bootstrap.Tab.getOrCreateInstance(document.getElementById('home-tab')).show(); });
-        document.querySelectorAll('#mainTabs .nav-link').forEach(link => { link.addEventListener('click', () => { const menu = document.getElementById('menu'); if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide(); }); });
+        function openTabFromHash() {
+            const hash = window.location.hash;
+            if (hash) {
+                const trigger = document.querySelector(`#mainTabs button[data-bs-target="${hash}"]`);
+                if (trigger) {
+                    bootstrap.Tab.getOrCreateInstance(trigger).show();
+                }
+            }
+        }
+
+        // Ouvre l'onglet correspondant si #contact, #team, etc. est dans l'URL
+        window.addEventListener('DOMContentLoaded', openTabFromHash);
+        window.addEventListener('hashchange', openTabFromHash);
+
+        // Met à jour l'URL quand on clique sur un onglet et ferme le menu mobile
+        document.querySelectorAll('#mainTabs .nav-link').forEach(btn => {
+            btn.addEventListener('shown.bs.tab', e => {
+                history.replaceState(null, null, e.target.getAttribute('data-bs-target'));
+            });
+            btn.addEventListener('click', () => {
+                const menu = document.getElementById('menu');
+                if (menu.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                }
+            });
+        });
+
+        // Clic sur le logo MML-GEO ramène à Home
+        document.getElementById('brand-home').addEventListener('click', e => {
+            e.preventDefault();
+            bootstrap.Tab.getOrCreateInstance(document.getElementById('home-tab')).show();
+        });
     </script>
 </body>
 </html>
